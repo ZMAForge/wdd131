@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 header, footer {
@@ -18,10 +19,67 @@ header h1 {
     border: none;
     color: white;
     cursor: pointer;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 nav a {
     color: white;
     display: none;
+}
+
+body {
+    text-align: center;
+    background-color: #ccc;
+}
+
+body h1 {
+    padding: 1rem;
+}
+
+content {
+    width: 90%;
+}
+
+#gallery {
+    margin: 0 auto;
+    justify-items: center;
+}
+
+#gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 7px solid white;
+    box-shadow: 4px 4px 12px black;
+    margin: .5rem;
+}
+
+footer {
+    margin-top: 10px;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .main-btn {
+        display: none;
+    }
+
+    nav a {
+        display: inline;
+        margin: 1rem;
+    }
+    nav {
+        padding-bottom: 1rem;
+    }
 }
