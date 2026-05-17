@@ -22,8 +22,19 @@ header h1 {
     padding: 1rem;
 }
 
+nav {
+    padding-bottom: 5px;
+}
+
 nav a {
     color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-top: 2px solid white;
+}
+
+.hidden {
     display: none;
 }
 
@@ -52,6 +63,36 @@ content {
     border: 7px solid white;
     box-shadow: 4px 4px 12px black;
     margin: .5rem;
+}
+
+figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+    display: block;
+    margin: 0 auto;
+}
+/* modal */
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
 }
 
 footer {
