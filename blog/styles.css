@@ -68,7 +68,7 @@ footer {
     margin: 1rem;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px){
     .review {
         display: grid;
         grid-template-columns: 1fr 2fr;
