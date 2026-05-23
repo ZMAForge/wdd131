@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+h1, h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#mainhead h1 {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 3px solid #efc9a1;
+}
+
+nav {
+    text-align: right;
+    padding: 1rem;
+    border-bottom: 3px solid #efc9a1;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a60629;
+    padding-right: 15px;
+}
+
+.review {
+    margin-top: 2rem;
+    border-top: 3px solid #efc9a1;
+    border-bottom: 3px solid #efc9a1;
+}
+
+.review header {
+    text-align: right;
+    margin: 1rem;
+}
+
+.review header p, time {
+    margin: .5rem;
+}
+
+.review main {
+    text-align: right;
+    padding-right: 5rem;
+}
+
+.review main h2, .review main p {
+    padding: 1.5rem;
+}
+
+.review h2 {
+    color: #a60629;
+}
+.review main img {
+    margin: 0 auto;
+    width: 35%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    margin: 1rem;
+}
+
+@media (min-width: 400px) {
+    .review {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .review header {
+        border-right: 3px solid #efc9a1;
+    }
+    .review main {
+        text-align: left;
+    }
+}
