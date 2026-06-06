@@ -4,26 +4,32 @@
     padding: 0;
 }
 
-main {
-    background-color: gray;
+#content {
+    background-color: #bcceda;
+    width: 80%;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #ticket {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    width: 400px;
-    height: 400px;
+    gap: .5rem;
     margin: 0 auto;
     background-color: white;
     border: none;
     border-radius: 5px;
-    padding: 2rem;
+    padding: 1.25rem;
 }
 
 .field {
     display: flex;
     flex-direction: column;
+}
+
+.field input, select, button {
+    padding: 7px 0;
 }
 
 .full {
@@ -32,6 +38,14 @@ main {
 
 [hidden] {
     display: none;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+button {
+    background-color: #bcceda;
 }
 
 footer {
