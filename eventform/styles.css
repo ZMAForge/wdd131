@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: gray;
+}
+
+#ticket {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.full {
+    grid-column: 1/3;
+}
+
+[hidden] {
+    display: none;
+}
+
+footer {
+    padding-top: 2rem;
+    text-align: center;
+}
