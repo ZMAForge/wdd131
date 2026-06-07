@@ -4,6 +4,7 @@ const code = document.querySelector("#code");
 const numberContainer = document.getElementById("studentId")
 const codeContainer = document.getElementById("generalCode")
 const number = document.querySelector("#number");
+const output = document.querySelector("#output");
 
 function onChange() {
     const value = type.value;
@@ -28,6 +29,12 @@ function onChange() {
     }
 }
 
+function isPastDate(value) {
+  const today = new Date();
+  const chosen = new Date(value);
+  return chosen < today;
+}
+
 type.addEventListener("change", onChange)
 
 form.addEventListener("submit", function (event){
@@ -41,6 +48,10 @@ form.addEventListener("submit", function (event){
     const type = form.type.value.trim();
     
     //verify date is not in the past
+    if (isPastDate(date)) {
+        output.textContent = "Please choose a later date.";
+        return;
+    }
 
     //verify that studentid is exactly 9 characters long
     if (type === "student") {
@@ -53,4 +64,22 @@ form.addEventListener("submit", function (event){
         };
     }
     // verify code is EVENT131
+    if (type === "guest") {
+        console.log("Code check started");
+        const input = code.value.trim();
+        if (input !== "EVENT131") {
+            output.textContent = "Code Invalid. Please Try Again";
+            console.log("check passed");
+            return;
+        }
+    }
+
+    output.innerHTML = `
+    <h2>Ticket Created</h2>
+    <p>${fname} ${lname}</p>
+    <p>${type}</p>
+    <p>${date}</p>
+    `;
+    form.reset();
+
 })
