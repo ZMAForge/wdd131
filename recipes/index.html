@@ -32,11 +32,38 @@
     <link rel="apple-touch-icon" href="appletouch.png">
 </head>
 <body>
-    <header>
-        <img src="images/recipe-book.png" alt="An image of a book with a chef hat on it, rendered in black and white using only simple lines">
-        <h1>RecipeBook</h1>
+    <div id="content">
+        <header>
+        <div class="logo">
+            <img src="images/recipe-book.png" alt="An image of a book with a chef hat on it, rendered in black and white using only simple lines">
+            <h1>RecipeBook</h1>
+        </div>
+        <div id="search">
+            <h2>Search</h2>
+            <img src="images/search.svg" alt="A search Icon">
+        </div>
     </header>
-    <main></main>
+    <main>
+        <article class="recipe-card">
+            <img src="images/apple-crisp.jpg" alt="A picture of a dessert called apple crisp">
+            <div class="card-content">
+                <button disabled>Dessert</button>
+                <h3>Apple Crisp</h3>
+                <span
+                class="rating"
+                role="img"
+                aria-label="Rating: 4 out of 5 stars"
+                >
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla icecream.</p>
+            </div>
+        </article>
+    </main>
     <footer>
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
@@ -46,5 +73,6 @@
         </div>                              
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     </footer>
+    </div>
 </body>
 </html>
