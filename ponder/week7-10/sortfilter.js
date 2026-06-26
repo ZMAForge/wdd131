@@ -82,7 +82,7 @@ const animals = [
 let queary = 'dog';
 let filteredList = animals.filter(searchList);
 function searchList (item) {
-    return item.name.toLowerCase().includes(queary.toLowerCase());
+    return item.name.toLowerCase().includes(queary.toLowerCase()); //This essentially says check item(the object animal proved by filter sourced from animals)'s name and if it include the search, return that to filter to be compiled into a new list.
 }
 
 console.log(filteredList);
