@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- TODO:
+     Import Updated Logo (COMPLETED)
+     Take New Hero Image Photo
+     Update Social tags
+     Develope Icon Photos for Each Social Media type(Reference class for px requirements)
+     Make Two more Example Cards to get CSS going
+     Start CSS (REMEMBER MOBILE FIRST)
+     Make JS Object Array, and Review Recipes for Tags and Filters
+     Add JS to make filter functions and change the displayed cards -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge Home</title>
+    <meta name="author" content="ZMAForge">
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+                            
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZMAForge Home">
+    <meta property="og:description" content="A living portfolio for creater ZMAForge, showcasing projects and skills">
+    <meta property="og:url" content="https://zmaforge.gitub.io/wdd131/forgehome/">
+    <meta property="og:image" content="social-preview-img.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZMAForge Home">
+    <meta name="twitter:description" content="A living portfolio for creater ZMAForge, showcasing projects and skills">
+    <meta name="twitter:image" content="social-preview-img.png">
+
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="icon.png">
+
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="appletouch.png">
+</head>
+<body>
+    <header>
+        <img src="images/ZMA.jpg" alt="The Logo for ZMAForge. It resembles a simple anvil.">
+        <h1>ZMAForge Project Home</h1>
+        <nav>
+            <a href="#">About the Author</a>
+        </nav>
+    </header>
+    <main>
+        <div id="hero">
+            <img src="images/hero.png" alt="">
+            <h2>Learned Today, Used Tomorrow</h2>
+            <p>
+                I, ZMAForge, have always been interested in learning aquiring new skills.
+                I believe this to be the best way to improve myself and learn how to make
+                complete and appealing prohects. It is with this in mind, that these projects
+                have been completed both as class projects, personal projects, and positions
+                I've held. 
+            </p>
+        </div>
+        <div id="filter">
+            <h3>Select a Category to Filter Cards</h3>
+            <button>Class Projects</button>
+            <button>Personal Projects</button>
+            <button>Job Positions</button>
+        </div>
+        <div id="card-container">
+            <article class="gallery-card class">
+                <img src="images/story-game.png" alt="An image showcasing a python project, showing both a portion of the code and it being run.">
+                <h4>Choose your own Adventure!</h4>
+                <p>
+                    File Name: storygame.py
+                </p>
+                <span class="tags">
+                    <button disabled>Class Project</button>
+                    <button disabled>Python</button>
+                </span>
+                <p>
+                    Purpose: To learn how to utlize nested if's in python. This 
+                    assignment was assigned in CSE110. I decided I wanted to seperate the 
+                    story chunks from the code itself, and as such gained an early introduction
+                    to python functions to be able to call the predifined chunks of 
+                    code. This also enabled me to loop one branch of the story to another
+                    as I decided was necessary.
+                </p>
+            </article>
+            <article class="gallery-card personal">
+                <img src="images/story-game.png" alt="An image showcasing a python project, showing both a portion of the code and it being run.">
+                <h4>Sleepy Chef Search</h4>
+                <p>
+                    File Name: sleepy-chef-search.py
+                </p>
+                <span class="tags">
+                    <button disabled>Class Project</button>
+                    <button disabled>Personal Project</button>
+                    <button disabled>Python</button>
+                </span>
+                <p>
+                    Purpose: To combine all of what we had learned in CSE111 and make our own personal program.
+                    I decided that I wanted to make a local meal aid for people who have difficulty making decisions.
+                    This program uses a file that it reads and writes to. It has multiple functions, such as displaying
+                    all the recipes it has stored with minmal information to prevent user overwhelm, search based off of 
+                    certain criteria and returning tha matching results,
+                    and a step by step process for adding or removing recipes as needed. It is to this day one of my 
+                    proudest projects, as I came up with the project myself, and with some trial and error, got it working.
+                </p>
+            </article>
+            <article class="gallery-card skills">
+                <img src="images/dads-place.jpg" alt="An image showing a driveway through the woods, the sun shining through the leaves.">
+                <h4>Dad's Place</h4>
+                <p>
+                    Job Position: Sanitation Expert
+                </p>
+                <span class="tags">
+                    <button disabled>Job</button>
+                    <button disabled>Inventory Management</button>
+                    <button disabled>Janitorial</button>
+                    <button disabled>Adaptive Work Processess</button>
+                </span>
+                <p>
+                    Job Overview: I was tasked with keeping an assisted living residence clean for 5 residents, which then 
+                    grew to 7 during my work there. I was in charge in memorizing the different cleaning process for each of 
+                    the residents, as well as specific cleaning processes for different materials. I was asked to work for exactly 
+                    4 hours in a single rush, so I had to adapt cleaning time to be meticulous and perfect in order to help protect 
+                    the residents as well as meet this tight time frame. Furthermore, the route and methods used had to change based off 
+                    of where each resident currently was, as well as around meal times, and guest visits. It was a physically 
+                    demanding but spirtually fulfilling position.
+                </p>
+            </article>
+        </div>
+        <div class="contact-forge">
+            <h2>Have any Ideas for New Projects or Skills?</h2>
+            <h3>Reach out to me at <em>zmaforge@gmail.com</em>!</h3>
+        </div>
+        <footer>
+            <p>Completed in Compliance with WDD Personal Project. Last Updated: 7/17/2026</p>
+            <a href="#">About The Author</a>
+        </footer>
+    </main>
+</body>
+</html>
