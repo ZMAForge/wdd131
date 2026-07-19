@@ -53,10 +53,23 @@ header img {
     color: var(--accent1-color);
     text-shadow: 2px 2px 5px black;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #hero h2, #hero p {
     background-color: rgba(00, 00, 00, 0.2);
+}
+
+#hero button, .contact-forge button {
+    align-self: center;
+    margin-top: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    /* background-image: radial-gradient(var(--accent1-color) 45%, var(--accent2-color)); */
+    background-color: #dabfff;
+    box-shadow: inset 0px 1px 17px 5px #907ad6;
+    border: none;
 }
 
 #category {
@@ -116,4 +129,28 @@ header img {
     background-color: #dabfff;
     border-color: #907ad6;
     color: black;
+}
+
+.tags button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tags {
+    line-height: 2.5rem;
+}
+
+.contact-forge {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: white;
 }
