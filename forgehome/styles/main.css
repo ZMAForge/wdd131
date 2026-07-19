@@ -42,12 +42,10 @@ header img {
     width: 20%;
     max-width: 100px;
     height: auto;
-    /* margin: 1rem; */
 }
 
 #hero {
     background-image: url("../images/small-hero.jpg");
-    /* background-position: left center; */
     background-size: cover;
     color: var(--accent1-color);
     text-shadow: 2px 2px 5px black;
@@ -67,7 +65,6 @@ header img {
     margin-top: 1rem;
     padding: 5px;
     border-radius: 5px;
-    /* background-image: radial-gradient(var(--accent1-color) 45%, var(--accent2-color)); */
     background-color: #dabfff;
     box-shadow: inset 0px 1px 17px 5px #907ad6;
     border: none;
@@ -197,11 +194,3 @@ footer {
         object-fit: cover;
     }
 }
-
-/* @media screen and (min-width: 1000px) {
-    .gallery-card img {
-        width: 20rem;
-        height: 20rem;
-        object-fit: cover;
-    }
-} */
