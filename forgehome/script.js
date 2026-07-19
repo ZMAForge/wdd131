@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "Choose Your Own Adventure",
-        color: "school",
+        color: "class",
         src: "images/story-game.png",
         alt: "An image showcasing a python project, showing both a portion of the code and it being run.",
         type: "File Name: storygame.py",
@@ -46,16 +46,16 @@ const projects = [
     {
         title: "ZMAForge Home V.2",
         color: "personal",
-        src:"",
-        alt:"",
+        src:"images/forgev2.png",
+        alt:"An Image of the very webpage you are visiting right now.",
         type:"File Names: index.html, about-creator.html, main.css, script.js",
         tags: ["Personal Project", "HTML", "CSS", "JavaScript"],
         description: [
             "Purpose: Create a Personal Page utilizing the things we have covered in WDD131.",
             "While this assignment was done in completion of a classroom assignment(This very ",
             "page to be exact), the page had been thought up ages berfore the assignment, and ",
-            "is something I would like to be constantly improving, as I continue to learn, ",
-            "therefore, personal is the best category for this assignment to fit under."
+            "is something I would like to be constantly improving, as I continue to learn. ",
+            "Therefore, personal is the best category for this assignment to fit under."
         ],
     },
     {
@@ -107,8 +107,8 @@ const projects = [
     {
         title: "National Honors Society",
         color: "skills",
-        src: "",
-        alt:"",
+        src: "images/nhs.jpg",
+        alt:"A page scanned from a yearbook, showcasing the events of the National Honors Society. This page was designed by ZMAForge.",
         type: "Position: Historian",
         tags: ["Extracurricular", "Leadership Position", "Planning and Documentation"],
         description: [
@@ -122,9 +122,11 @@ const projects = [
     {
         title: "John Adams Academy-Lincoln Yearbook Team",
         color: "skills",
-        src:"",
-        alt:"",
+        src:"images/yearbook.jpg",
+        alt:"A scanned yearbook page of the art section. This page was designed by ZMAForge.",
         type: "Position Held: Design Editor",
+
+
         tags: ["Extracurricular", "Leadership Position", "Training and Aiding"],
         description: [
             "I worked on the yearbook team at JAA-L for 3 years. It is often very demanding work, requireing skipping ",
@@ -138,3 +140,66 @@ const projects = [
         ],
     },
 ]
+
+const filterChoice = document.getElementById("filter");
+const cardContainer= document.getElementById("card-container");
+
+let search = "class";
+let classCards = projects.filter(searchValue);
+console.log(classCards);
+
+search = "skill";
+let skillCards = projects.filter(searchValue);
+console.log(skillCards);
+
+search = "personal";
+let personalCards = projects.filter(searchValue);
+console.log(personalCards);
+
+function searchValue (item) {
+    return item.color.includes(search);
+}
+
+filterChoice.addEventListener("click", selectDisplay);
+
+function selectDisplay (e) {
+    console.log(e.target.id);
+    let value = e.target.id;
+    cardContainer.innerHTML = "";
+    if (value === "class") {
+        classCards.forEach(createCard);
+        console.log("class triggered");
+    } else if (value === "skill") {
+        skillCards.forEach(createCard);
+        console.log("skill triggered");
+    } else {
+        personalCards.forEach(createCard);
+        console.log("personal triggered");
+    }
+}
+
+function tagTemplate(tags) {
+    return tags.map((tag)=> `<button>${tag}</button>`).join(' ');
+}
+
+function createCard (item) {
+    let name = document.createElement("article");
+    name.className = `gallery-card ${item.color}`;
+
+    let html = `
+        <img src=${item.src} alt=${item.alt}>
+        <h4>${item.title}</h4>
+        <p>
+            ${item.type}
+        </p>
+        <span class="tags">
+            ${tagTemplate(item.tags)}
+        </span>
+        <p>
+            ${item.description}
+        </p>
+        `;
+    
+        name.innerHTML = html;
+        cardContainer.appendChild(name);
+}
