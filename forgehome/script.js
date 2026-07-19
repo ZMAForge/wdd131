@@ -44,13 +44,19 @@ const projects = [
         ],
     },
     {
-        title: "",
+        title: "ZMAForge Home V.2",
         color: "personal",
         src:"",
         alt:"",
-        type:"",
-        tags: [],
-        description: [],
+        type:"File Names: index.html, about-creator.html, main.css, script.js",
+        tags: ["Personal Project", "HTML", "CSS", "JavaScript"],
+        description: [
+            "Purpose: Create a Personal Page utilizing the things we have covered in WDD131.",
+            "While this assignment was done in completion of a classroom assignment(This very ",
+            "page to be exact), the page had been thought up ages berfore the assignment, and ",
+            "is something I would like to be constantly improving, as I continue to learn, ",
+            "therefore, personal is the best category for this assignment to fit under."
+        ],
     },
     {
         title: "ZMAForge Home Ver.1",

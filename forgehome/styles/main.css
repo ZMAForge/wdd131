@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
+:root {
+    --main-color: #2c2a4a;
+    --second-color: #907ad6;
+    --accent1-color: #dabfff;
+    --accent2-color: #4f518c;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,4 +14,106 @@
 
 img {
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+p, button {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 4px solid var(--second-color);
+}
+
+header img {
+    width: 20%;
+    max-width: 100px;
+    height: auto;
+    /* margin: 1rem; */
+}
+
+#hero {
+    background-image: url("../images/small-hero.jpg");
+    /* background-position: left center; */
+    background-size: cover;
+    color: var(--accent1-color);
+    text-shadow: 2px 2px 5px black;
+    padding: 1.5rem;
+}
+
+#hero h2, #hero p {
+    background-color: rgba(00, 00, 00, 0.2);
+}
+
+#category {
+    margin: 1rem 0px;
+    text-justify: center;
+    color: var(--main-color);
+}
+
+#category h3 {
+    padding-bottom: 1em;
+}
+
+#filter {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#filter button {
+    flex: 1;
+    padding: 0.5rem;
+    color: var(--main-color);
+    background-color: white;
+    border-color: rgb(171, 171, 171);
+    transform: translateY(-1px);
+}
+
+.gallery-card {
+    width: 85%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.gallery-card img {
+    border-radius: 5px;
+}
+
+.gallery-card h4,
+.gallery-card p,
+.gallery-card span {
+    margin: 0.5rem;
+}
+
+.school, #class:hover {
+    background-color: #4f518c;
+    border-color: #2c2a4a;
+    color: black;
+}
+
+.skills, #skill:hover {
+    background-color: #907ad6;
+    border-color: #4f518c;
+    color: black;
+}
+
+.personal, #personal:hover {
+    background-color: #dabfff;
+    border-color: #907ad6;
+    color: black;
 }
